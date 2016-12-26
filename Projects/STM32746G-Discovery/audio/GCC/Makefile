@@ -77,7 +77,6 @@ INCLUDEDIRS += $(wildcard $(STM32CUBE_ROOT)Drivers/BSP/Components/*)
 INCLUDEDIRS += $(STM32CUBE_ROOT)Drivers/$(HAL_NAME_REAL)/Inc
 INCLUDEDIRS += $(STM32CUBE_ROOT)Drivers/CMSIS/Include
 INCLUDEDIRS += $(STM32CUBE_ROOT)Drivers/CMSIS/Device/ST/$(CMSIS_NAME_REAL)/Include
-INCLUDEDIRS += $(shell find $(STM32CUBE_ROOT)Middlewares/ -name Inc)
 
 # Project source files
 SOURCES =  $(shell find ../Src -iname "system_stm32$(STM32FAMILY)xx.c")
@@ -90,7 +89,6 @@ SOURCES += $(shell find ../Src -not -iname "cube_hal_*" -and -not -iname "*stm32
 SOURCES += $(shell find $(STM32CUBE_ROOT)Drivers/BSP/$(BSP_NAME_REAL)/ -name "*.c")
 SOURCES += $(shell find $(STM32CUBE_ROOT)Drivers/BSP/Components/  -name "*.c")
 SOURCES += $(shell find $(STM32CUBE_ROOT)Drivers/$(HAL_NAME_REAL)/Src -name "*.c")
-#SOURCES += $(shell find $(STM32CUBE_ROOT)Middlewares/ -name "*.c")
 
 # Add assembly startup template
 SOURCE_AS := $(STM32CUBE_ROOT)Drivers/CMSIS/Device/ST/$(CMSIS_NAME_REAL)/Source/Templates/gcc/startup_$(shell echo $(STM32ANNNXN) | tr A-Z a-z).s
