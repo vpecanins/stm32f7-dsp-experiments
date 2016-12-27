@@ -147,7 +147,7 @@ int main(void)
   
   /* Initialize the LCD Log module */
   LCD_LOG_Init();
-  LCD_LOG_SetHeader((uint8_t *)"STM32F7 Audio DSP Demo");
+  LCD_LOG_SetHeader((uint8_t *)"STM32F7 Audio DSP: RMS Mono");
   LCD_UsrLog("LCD log module started\n"); 
   LCD_UsrLog("Compiled at: " __DATE__ ", " __TIME__ "\n");
 
