@@ -386,7 +386,7 @@ static void AudioRec_demo (void)
 	  
 	printf("Block %lu transfer complete (L=%hd, R=%hd)\n", block_number, rms_l, rms_r);
 	
-    block_number++;
+    block_number++; 
   }
 
 }

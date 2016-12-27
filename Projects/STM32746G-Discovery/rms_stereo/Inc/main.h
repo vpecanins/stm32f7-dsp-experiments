@@ -80,7 +80,7 @@
   * @brief  Audio buffer next to LCD frame buffers.
   */
 #define SDRAM_WRITE_READ_ADDR       ((uint32_t)(LCD_FB1_START_ADDRESS + (RK043FN48H_WIDTH * RK043FN48H_HEIGHT * ARBG8888_BYTE_PER_PIXEL)))
-#define AUDIO_BLOCK_SIZE    		((uint32_t)0xFFFE) /* in WORDS (16-bit values) */
+#define AUDIO_BLOCK_SIZE    		((uint32_t)0x10000-2) /* in WORDS (16-bit values) */
 
 #define AUDIO_REC_START_ADDR_L      (SDRAM_WRITE_READ_ADDR)
 #define AUDIO_REC_START_ADDR_R      (AUDIO_REC_START_ADDR_L+0x10000)
