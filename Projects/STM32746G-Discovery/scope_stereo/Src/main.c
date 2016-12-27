@@ -49,7 +49,7 @@
 #include "main.h"
 #include <stdio.h>
 #include "string.h"
-#include "arm_math.h"
+#include "arm_math.h" 
 
 /** @addtogroup STM32F7xx_HAL_Examples
   * @{
@@ -68,6 +68,13 @@ typedef enum
   BUFFER_OFFSET_FULL = 2,
 }BUFFER_StateTypeDef;
 
+typedef struct {
+	int xmin;
+	int xmax;
+	int ymin;
+	int ymax;
+} GL_Chart;
+
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
@@ -75,6 +82,13 @@ typedef enum
 static uint16_t  internal_buffer[AUDIO_BLOCK_SIZE];
 uint32_t  block_number;
 uint8_t   current_screen;
+
+GL_Chart gl_chart = {
+	.xmin=-10,
+	.xmax=10,
+	.ymin=-5,
+	.ymax=5
+};
 
 /* Global extern variables ---------------------------------------------------*/
 
@@ -88,6 +102,8 @@ uint32_t    ErrorCounter = 0;
 static void SystemClock_Config(void);
 static void CPU_CACHE_Enable(void);
 static void AudioRec_demo (void);
+
+void GL_DrawAxis(GL_Chart* g);
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -118,7 +134,7 @@ int main(void)
 
   /*##-1- Initialize the LCD #################################################*/
   /* Initialize the LCD */
-  current_screen = 0;
+  current_screen = 1;
   lcd_status = BSP_LCD_Init();
   ASSERT(lcd_status != LCD_OK);
   
@@ -132,10 +148,18 @@ int main(void)
   BSP_LCD_SelectLayer(1);
   BSP_LCD_SetTransparency(1, 0x00);
   
+  /* LCD Layer 2 Initialization */
+  BSP_LCD_LayerDefaultInit(2, LCD_FB2_START_ADDRESS); 
+  BSP_LCD_SelectLayer(2);
+  BSP_LCD_SetTransparency(2, 0x00);
+  
+  BSP_LCD_SelectLayer(1);
+  
   /* Draw a test circle and background to the layer 1 */
   BSP_LCD_Clear(LCD_COLOR_TRANSPARENT);
-  BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-  BSP_LCD_DrawCircle(BSP_LCD_GetXSize()/2, BSP_LCD_GetYSize()/2, 10);
+  //BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+  //BSP_LCD_DrawCircle(BSP_LCD_GetXSize()/2, BSP_LCD_GetYSize()/2, 10);
+  GL_DrawAxis(&gl_chart);
   
   /* Return to layer 0 for putting the console */
   BSP_LCD_SelectLayer(0);
@@ -145,9 +169,10 @@ int main(void)
   
   /* Initialize the LCD Log module */
   LCD_LOG_Init();
-  LCD_LOG_SetHeader((uint8_t *)"STM32F7 Audio DSP: RMS Stereo");
-  LCD_UsrLog("LCD log module started\n"); 
-  LCD_UsrLog("Compiled at: " __DATE__ ", " __TIME__ "\n");
+  LCD_LOG_SetHeader((uint8_t *)"STM32F7 Audio DSP: Stereo Oscilloscope");
+  LCD_DbgLog("LCD log module started\n"); 
+  LCD_DbgLog("Press B1 User button to switch screen\n"); 
+  LCD_DbgLog("Compiled at: " __DATE__ ", " __TIME__ "\n");
 
   HAL_Delay(500);
 
@@ -269,12 +294,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     if (current_screen==0) { 
 		BSP_LCD_SetTransparency(0, 0xFF); 
 		BSP_LCD_SetTransparency(1, 0x00); 
+		BSP_LCD_SetTransparency(2, 0x00);
 		current_screen=1; 
 	} else { 
-		BSP_LCD_SetTransparency(1, 0xFF); 
 		BSP_LCD_SetTransparency(0, 0x00); 
+		BSP_LCD_SetTransparency(1, 0xFF);
+		BSP_LCD_SetTransparency(2, 0xFF); 
 		current_screen=0; 
-	} 
+	}
   } 
 } 
 
@@ -432,6 +459,40 @@ void BSP_AUDIO_IN_Error_CallBack(void)
   /* .... */
 }
 
+
+void GL_DrawAxis(GL_Chart* g) {
+	int i=0;
+
+	int xsize = BSP_LCD_GetXSize();
+	int ysize = BSP_LCD_GetYSize();
+	
+	BSP_LCD_SetTextColor(LCD_COLOR_GRAY);
+	
+	int nx = g->xmax - g->xmin;
+	int ny = g->ymax - g->ymin;
+	
+	int xstep = xsize / nx;
+	int ystep = ysize / ny;
+	
+	int lcx= -xstep * g->xmin;
+	int lcy= -ystep * g->ymin;
+
+	/*Draw vertical lines*/
+	for (i=0; i<=nx; i++) {
+		BSP_LCD_DrawLine(i==nx ? i*xstep-1 : i*xstep, 
+						 i==-g->xmin ? 0 : lcy-5, 
+						 i==nx ? i*xstep-1 : i*xstep, 
+						 i==-g->xmin ? ysize : lcy+5);
+	}
+	
+	/*Draw horizontal lines*/
+	for (i=0; i<=ny; i++) {
+		BSP_LCD_DrawLine(i==-g->ymin ? 0 : lcx-5, 
+						 i==ny ? i*ystep : i*ystep,
+						 i==-g->ymin ? xsize : lcx+5,
+						 i==ny ? i*ystep : i*ystep);
+	}
+};
 
 #ifdef USE_FULL_ASSERT
 

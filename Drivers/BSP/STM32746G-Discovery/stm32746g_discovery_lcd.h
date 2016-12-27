@@ -100,7 +100,7 @@ typedef enum
 /** @defgroup STM32746G_DISCOVERY_LCD_Exported_Constants STM32746G_DISCOVERY_LCD Exported Constants
   * @{
   */ 
-#define MAX_LAYER_NUMBER       ((uint32_t)2)
+#define MAX_LAYER_NUMBER       ((uint32_t)3)
 
 #define LCD_LayerCfgTypeDef    LTDC_LayerCfgTypeDef
 
