@@ -9,7 +9,8 @@
 # Usage:  copy under a folder named GCC, side by side to SW4STM32 folder
 #         under the respective folder under Projects
 #
-# TODO: Generalize PROJ_PLATFORM when Multi
+# - agrep only works in Linux
+# - openocd only works in Linux
 #
 # Commands:
 #
@@ -24,9 +25,9 @@ SHELL := /bin/bash
 MAKE  := make
 
 # Path to GCC_ARM_NONE_EABI toolchain
-GCC_ARM_NONE_EABI_PATH := ~/workspace/STM32Toolchain/gcc-arm-none-eabi-5_2-2015q4/bin
+#GCC_ARM_NONE_EABI_PATH := ~/workspace/STM32Toolchain/gcc-arm-none-eabi-5_2-2015q4/bin
 #GCC_ARM_NONE_EABI_PATH := /home/vpecanins/Downloads/gcc-arm-none-eabi-5_4-2016q3/bin
-#GCC_ARM_NONE_EABI_PATH := /c/arm-toolchain/bin
+GCC_ARM_NONE_EABI_PATH := /c/arm-toolchain/bin
 CC      := $(GCC_ARM_NONE_EABI_PATH)/arm-none-eabi-gcc
 AR      := $(GCC_ARM_NONE_EABI_PATH)/arm-none-eabi-ar
 OBJCOPY := $(GCC_ARM_NONE_EABI_PATH)/arm-none-eabi-objcopy
@@ -43,15 +44,22 @@ STM32ANNN      := $(shell echo $(STM32ANNNAA) | cut -c -9)
 STM32AN        := $(shell echo $(STM32ANNNAA) | cut -c -7)
 STM32FAMILY    := $(shell echo $(STM32ANNNAA) | cut -c 6-7)
 BOARDTYPE      := $(shell echo $(PROJ_PLATFORM) | cut -d "-" -f 2)
-BSP_NAME       := $(STM32AN)xx_$(BOARDTYPE)
-HAL_NAME       := $(STM32AN)xx_HAL_Driver
-CMSIS_NAME     := $(STM32AN)xx
 SW4STM32_NAME  := $(PROJ_PLATFORM)
 
+## Catch-all alternatives
+## Comment to ST employees: Please regularize names in STM Cube packages.
+BSP_NAME_0     := $(STM32AN)xx_$(BOARDTYPE)
+HAL_NAME       := $(STM32AN)xx_HAL_Driver
+CMSIS_NAME     := $(STM32AN)xx
+
+
 ## Approximate guessing with agrep
-BSP_NAME_REAL  := $(shell ls "$(STM32CUBE_ROOT)Drivers/BSP/" | agrep -5 $(BSP_NAME))
-HAL_NAME_REAL  := $(shell ls "$(STM32CUBE_ROOT)Drivers/" | agrep -5 $(HAL_NAME))
-CMSIS_NAME_REAL:= $(shell ls "$(STM32CUBE_ROOT)Drivers/CMSIS/Device/ST/" | agrep -5 $(CMSIS_NAME))
+#BSP_NAME_REAL  := $(shell ls "$(STM32CUBE_ROOT)Drivers/BSP/" | agrep -5 $(BSP_NAME))
+#HAL_NAME_REAL  := $(shell ls "$(STM32CUBE_ROOT)Drivers/" | agrep -5 $(HAL_NAME))
+#CMSIS_NAME_REAL:= $(shell ls "$(STM32CUBE_ROOT)Drivers/CMSIS/Device/ST/" | agrep -5 $(CMSIS_NAME))
+BSP_NAME_REAL  := STM32746G-Discovery
+HAL_NAME_REAL  := $(HAL_NAME)
+CMSIS_NAME_REAL:= $(CMSIS_NAME)
 
 ## Getting the appropriate asm file is *very* tricky.
 ASM_PATH       := $(STM32CUBE_ROOT)Drivers/CMSIS/Device/ST/$(CMSIS_NAME_REAL)/Source/Templates/gcc
@@ -89,6 +97,7 @@ SOURCES += $(shell find ../Src -not -iname "cube_hal_*" -and -not -iname "*stm32
 SOURCES += $(shell find $(STM32CUBE_ROOT)Drivers/BSP/$(BSP_NAME_REAL)/ -name "*.c")
 SOURCES += $(shell find $(STM32CUBE_ROOT)Drivers/BSP/Components/  -name "*.c")
 SOURCES += $(shell find $(STM32CUBE_ROOT)Drivers/$(HAL_NAME_REAL)/Src -name "*.c")
+SOURCES += $(shell find $(STM32CUBE_ROOT)Drivers/CMSIS/DSP_Lib/Source -name "*.c")
 
 # Add assembly startup template
 SOURCE_AS := $(STM32CUBE_ROOT)Drivers/CMSIS/Device/ST/$(CMSIS_NAME_REAL)/Source/Templates/gcc/startup_$(shell echo $(STM32ANNNXN) | tr A-Z a-z).s
@@ -127,7 +136,7 @@ CFLAGS +=  $(addprefix -I,$(INCLUDEDIRS)) $(CLIBS)
 COMPILE_C    = $(CC) -c $< -o $@ $(CFLAGS)
 COMPILE_S    = $(CC) -c $< -o $@ $(CFLAGS)
 COMPILE_LINK = $(CC) -Os $(CFLAGS) $^ -o $@ -T $(LDSCRIPT) -MD
-BUILD_PRINT = @echo -e "\e[1;32mBuilding $@\e[0m"
+BUILD_PRINT  = @echo -e "\e[1;32mBuilding $@\e[0m"
 
 .PHONY: all
 
@@ -197,6 +206,9 @@ program: $(PROJ_NAME).elf stm_flash.cfg
 
 debug: $(PROJ_NAME).elf stm_flash.cfg
 	$(OPENOCD_DIR)/openocd $(addprefix -f,$(OPENOCD_SCRIPTS)) -c $(OPENOCD_COMMAND)
+	
+program-mbed: $(PROJ_NAME).elf
+	cp $(PROJ_NAME).bin /d/
 
 clean:
 	@rm -rf $(OBJ)

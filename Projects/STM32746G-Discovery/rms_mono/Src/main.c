@@ -14,6 +14,7 @@
   * Block size:           65534 mono samples (0xFFFE)
   * Samples per block:    32767 stereo samples
   * Block buffer length:  131068 bytes
+  *
   ******************************************************************************
   * @attention
   *
@@ -48,6 +49,7 @@
 #include "main.h"
 #include <stdio.h>
 #include "string.h"
+#include "arm_math.h"
 
 /** @addtogroup STM32F7xx_HAL_Examples
   * @{
@@ -85,7 +87,6 @@ uint32_t    ErrorCounter = 0;
 
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClock_Config(void);
-static void Display_DemoDescription(void);
 static void CPU_CACHE_Enable(void);
 static void AudioRec_demo (void);
 
@@ -146,7 +147,7 @@ int main(void)
   
   /* Initialize the LCD Log module */
   LCD_LOG_Init();
-  LCD_LOG_SetHeader("STM32F7 Audio DSP Demo");
+  LCD_LOG_SetHeader((uint8_t *)"STM32F7 Audio DSP Demo");
   LCD_UsrLog("LCD log module started\n"); 
   LCD_UsrLog("Compiled at: " __DATE__ ", " __TIME__ "\n");
 
@@ -366,7 +367,17 @@ static void AudioRec_demo (void)
     memcpy((uint32_t *)(AUDIO_REC_START_ADDR + (AUDIO_BLOCK_SIZE)),
            (uint16_t *)(&internal_buffer[AUDIO_BLOCK_SIZE/2]),
            AUDIO_BLOCK_SIZE);
-    
+		   
+    /* Calculate RMS value */
+    q15_t pResult;
+
+	arm_rms_q15(
+	  internal_buffer,
+	  AUDIO_BLOCK_SIZE/2,
+	  &pResult);
+	  
+	printf("Block %d transfer complete (%hd)\n", block_number, pResult);
+	
     block_number++;
   }
 
@@ -386,8 +397,6 @@ static void AudioRec_demo (void)
 void BSP_AUDIO_IN_TransferComplete_CallBack(void)
 {
   audio_rec_buffer_state = BUFFER_OFFSET_FULL;
-  //LCD_UsrLog("Block transfer complete\n");
-  printf("Block %d transfer complete (%hd)\n", block_number, *(uint16_t *)(AUDIO_REC_START_ADDR+AUDIO_BLOCK_SIZE*2));
   return;
 }
 
