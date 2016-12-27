@@ -340,11 +340,7 @@ static void AudioRec_demo (void)
     /* Wait end of half block recording */
     while(audio_rec_buffer_state != BUFFER_OFFSET_HALF)
     {
-      if (CheckForUserInput() > 0)
-      {
-		// These were BSP_AUDIO_OUT_Stop (victor)
-        return;
-      }
+	  HAL_Delay(10);
     }
     audio_rec_buffer_state = BUFFER_OFFSET_NONE;
 	
@@ -358,10 +354,7 @@ static void AudioRec_demo (void)
     /* Wait end of one block recording */
     while(audio_rec_buffer_state != BUFFER_OFFSET_FULL)
     {
-      if (CheckForUserInput() > 0)
-      {
-        return;
-      }
+	  HAL_Delay(10);
     }
     audio_rec_buffer_state = BUFFER_OFFSET_NONE;
 	
