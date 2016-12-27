@@ -74,12 +74,15 @@
   * LCD Frame buffer 0 start address : starts at beginning of SDRAM
   * Assuming LCD frame buffer is of size 480x800 and format ARGB8888 (32 bits per pixel).
   */
-#define LCD_FB0_START_ADDRESS        SDRAM_DEVICE_ADDR
-#define LCD_FB1_START_ADDRESS       ((uint32_t)(LCD_FB0_START_ADDRESS + (RK043FN48H_WIDTH * RK043FN48H_HEIGHT * ARBG8888_BYTE_PER_PIXEL)))
+#define LCD_FB_LENGTH               (RK043FN48H_WIDTH * RK043FN48H_HEIGHT * ARBG8888_BYTE_PER_PIXEL)
+#define LCD_FB0_START_ADDRESS       SDRAM_DEVICE_ADDR
+#define LCD_FB1_START_ADDRESS       ((uint32_t)(LCD_FB0_START_ADDRESS + LCD_FB_LENGTH))
+#define LCD_FB2_START_ADDRESS       ((uint32_t)(LCD_FB1_START_ADDRESS + LCD_FB_LENGTH))
+#define LCD_FB3_START_ADDRESS       ((uint32_t)(LCD_FB2_START_ADDRESS + LCD_FB_LENGTH))
 /**
   * @brief  Audio buffer next to LCD frame buffers.
   */
-#define SDRAM_WRITE_READ_ADDR       ((uint32_t)(LCD_FB1_START_ADDRESS + (RK043FN48H_WIDTH * RK043FN48H_HEIGHT * ARBG8888_BYTE_PER_PIXEL)))
+#define SDRAM_WRITE_READ_ADDR       ((uint32_t)(LCD_FB3_START_ADDRESS + LCD_FB_LENGTH))
 #define AUDIO_BLOCK_SIZE    		((uint32_t)0x10000-2) /* in WORDS (16-bit values) */
 
 #define AUDIO_REC_START_ADDR_L      (SDRAM_WRITE_READ_ADDR)

@@ -120,14 +120,12 @@ int main(void)
   lcd_status = BSP_LCD_Init();
   ASSERT(lcd_status != LCD_OK);
   
-  /* LCD Layer Initialization */
+  /* LCD Layer 0 Initialization */
   BSP_LCD_LayerDefaultInit(0, LCD_FB0_START_ADDRESS); 
-  
-  /* Select the LCD Layer */
   BSP_LCD_SelectLayer(0);
   BSP_LCD_SetTransparency(0, 0xFF);
   
-  /* Other layer*/
+  /* LCD Layer 1 Initialization */
   BSP_LCD_LayerDefaultInit(1, LCD_FB1_START_ADDRESS); 
   BSP_LCD_SelectLayer(1);
   BSP_LCD_SetTransparency(1, 0x00);
@@ -329,7 +327,7 @@ static void AudioRec_demo (void)
 
   audio_rec_buffer_state = BUFFER_OFFSET_NONE;
 
-  /* Display the state on the screen */
+  /* Display the state on the screen */ 
   LCD_UsrLog("Recording...\n");
 
   /* Start Recording */
