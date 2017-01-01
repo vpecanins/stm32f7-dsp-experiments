@@ -1,0 +1,76 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/msys64/usr/bin/gcc.exe 
+Build flags: 
+Id flags: 
+
+The output was:
+1
+C:/msys64/usr/lib/gcc/x86_64-pc-msys/5.3.0/cc1.exe: error while loading shared libraries: ?: cannot open shared object file: No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/msys64/usr/bin/gcc.exe 
+Build flags: 
+Id flags: -c
+
+The output was:
+1
+C:/msys64/usr/lib/gcc/x86_64-pc-msys/5.3.0/cc1.exe: error while loading shared libraries: ?: cannot open shared object file: No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/msys64/usr/bin/gcc.exe 
+Build flags: 
+Id flags: -Aa
+
+The output was:
+1
+C:/msys64/usr/lib/gcc/x86_64-pc-msys/5.3.0/cc1.exe: error while loading shared libraries: ?: cannot open shared object file: No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/msys64/usr/bin/gcc.exe 
+Build flags: 
+Id flags: -D__CLASSIC_C__
+
+The output was:
+1
+C:/msys64/usr/lib/gcc/x86_64-pc-msys/5.3.0/cc1.exe: error while loading shared libraries: ?: cannot open shared object file: No such file or directory
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+gcc: fatal error: no input files
+compilation terminated.
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/msys64/usr/bin/g++.exe 
+Build flags: 
+Id flags: 
+
+The output was:
+1
+C:/msys64/usr/lib/gcc/x86_64-pc-msys/5.3.0/cc1plus.exe: error while loading shared libraries: ?: cannot open shared object file: No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/msys64/usr/bin/g++.exe 
+Build flags: 
+Id flags: -c
+
+The output was:
+1
+C:/msys64/usr/lib/gcc/x86_64-pc-msys/5.3.0/cc1plus.exe: error while loading shared libraries: ?: cannot open shared object file: No such file or directory
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+g++: fatal error: no input files
+compilation terminated.
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono_codelite/CODELITE/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/msys64/usr/bin/make.exe" "cmTC_f993d/fast"
+/usr/bin/make -f CMakeFiles\cmTC_f993d.dir\build.make CMakeFiles/cmTC_f993d.dir/build
+" m T C _ f 9 9 3 d . d i r "   n o   s e   r e c o n o c e   c o m o   u n   c o m a n d o   i n t e r n o   o   e x t e r n o ,  
+ p r o g r a m a   o   a r c h i v o   p o r   l o t e s   e j e c u t a b l e .  
+ make: *** [Makefile:125: cmTC_f993d/fast] Error 1
+
+

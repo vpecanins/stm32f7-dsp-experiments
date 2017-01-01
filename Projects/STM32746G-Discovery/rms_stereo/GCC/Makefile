@@ -27,7 +27,7 @@ MAKE  := make
 # Path to GCC_ARM_NONE_EABI toolchain
 #GCC_ARM_NONE_EABI_PATH := ~/workspace/STM32Toolchain/gcc-arm-none-eabi-5_2-2015q4/bin
 #GCC_ARM_NONE_EABI_PATH := /home/vpecanins/Downloads/gcc-arm-none-eabi-5_4-2016q3/bin
-GCC_ARM_NONE_EABI_PATH := /c/arm-toolchain/bin
+GCC_ARM_NONE_EABI_PATH := /cygdrive/c/arm-toolchain/bin
 CC      := $(GCC_ARM_NONE_EABI_PATH)/arm-none-eabi-gcc
 AR      := $(GCC_ARM_NONE_EABI_PATH)/arm-none-eabi-ar
 OBJCOPY := $(GCC_ARM_NONE_EABI_PATH)/arm-none-eabi-objcopy

@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="rms_mono" InternalType="Console">
+  <VirtualDirectory Name="Projects">
+    <VirtualDirectory Name="STM32746G-Discovery">
+      <VirtualDirectory Name="rms_mono_codelite">
+        <VirtualDirectory Name="Inc">
+          <File Name="../Inc/lcd_log.h"/>
+          <File Name="../Inc/lcd_log_conf.h"/>
+          <File Name="../Inc/main.h"/>
+          <File Name="../Inc/stm32f7xx_hal_conf.h"/>
+          <File Name="../Inc/stm32f7xx_it.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="Src">
+          <File Name="../Src/lcd.c"/>
+          <File Name="../Src/lcd_log.c"/>
+          <File Name="../Src/main.c"/>
+          <File Name="../Src/stm32f7xx_it.c"/>
+          <File Name="../Src/syscalls.c"/>
+          <File Name="../Src/system_stm32f7xx.c"/>
+        </VirtualDirectory>
+      </VirtualDirectory>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Drivers">
+    <VirtualDirectory Name="STM32F7xx_HAL_Driver">
+      <VirtualDirectory Name="Inc">
+        <VirtualDirectory Name="Legacy">
+          <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h"/>
+        </VirtualDirectory>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cec.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cryp.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cryp_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dac.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dac_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dcmi.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dcmi_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dfsdm.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dsi.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_hash.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_hash_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_hcd.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2s.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_irda.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_irda_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_iwdg.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_jpeg.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_lptim.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ltdc.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ltdc_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_mdios.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_nand.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_nor.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rng.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sai.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sai_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_smartcard.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_smartcard_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spdifrx.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sram.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_usart.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_usart_ex.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_wwdg.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_fmc.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Src">
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cec.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_crc.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_crc_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cryp.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cryp_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dac.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dac_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dcmi.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dcmi_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_eth.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_hash.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_hash_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_hcd.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2s.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_irda.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_iwdg.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_jpeg.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_lptim.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_mdios.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_nand.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_nor.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_qspi.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rng.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rtc.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rtc_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sd.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_smartcard.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_smartcard_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spdifrx.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sram.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_usart.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_wwdg.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_sdmmc.c"/>
+        <File Name="../../../../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_usb.c"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="CMSIS">
+      <VirtualDirectory Name="RTOS">
+        <VirtualDirectory Name="Template">
+          <File Name="../../../../Drivers/CMSIS/RTOS/Template/cmsis_os.h"/>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="DSP_Lib">
+        <VirtualDirectory Name="Source">
+          <VirtualDirectory Name="BasicMathFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_abs_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_abs_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_abs_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_abs_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_add_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_add_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_add_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_add_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_dot_prod_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_dot_prod_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_dot_prod_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_dot_prod_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_mult_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_mult_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_mult_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_mult_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_negate_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_negate_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_negate_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_negate_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_offset_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_offset_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_offset_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_offset_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_scale_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_scale_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_scale_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_scale_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_shift_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_shift_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_shift_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_sub_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_sub_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_sub_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_sub_q7.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="CommonTables">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/CommonTables/arm_common_tables.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/CommonTables/arm_const_structs.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="ComplexMathFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_conj_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_conj_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_conj_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_dot_prod_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_dot_prod_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_dot_prod_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mag_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mag_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mag_squared_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mag_squared_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mag_squared_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mult_cmplx_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mult_cmplx_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mult_cmplx_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mult_real_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mult_real_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mult_real_q31.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="ControllerFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ControllerFunctions/arm_pid_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ControllerFunctions/arm_pid_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ControllerFunctions/arm_pid_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ControllerFunctions/arm_pid_reset_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ControllerFunctions/arm_pid_reset_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ControllerFunctions/arm_pid_reset_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ControllerFunctions/arm_sin_cos_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/ControllerFunctions/arm_sin_cos_q31.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="FastMathFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_cos_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_cos_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_cos_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_sin_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_sin_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_sin_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_sqrt_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_sqrt_q31.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="FilteringFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_32x64_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_32x64_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_fast_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_fast_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df1_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df2T_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df2T_f64.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df2T_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_df2T_init_f64.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_stereo_df2T_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_biquad_cascade_stereo_df2T_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_fast_opt_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_fast_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_fast_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_opt_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_opt_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_fast_opt_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_fast_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_fast_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_opt_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_opt_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_partial_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_conv_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_fast_opt_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_fast_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_fast_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_opt_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_opt_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_correlate_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_decimate_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_decimate_fast_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_decimate_fast_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_decimate_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_decimate_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_decimate_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_decimate_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_decimate_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_fast_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_fast_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_init_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_interpolate_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_interpolate_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_interpolate_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_interpolate_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_interpolate_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_interpolate_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_lattice_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_lattice_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_lattice_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_lattice_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_lattice_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_lattice_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_sparse_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_sparse_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_sparse_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_sparse_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_sparse_init_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_sparse_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_sparse_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_fir_sparse_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_iir_lattice_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_iir_lattice_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_iir_lattice_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_iir_lattice_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_iir_lattice_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_iir_lattice_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_norm_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_norm_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_norm_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_norm_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_norm_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_norm_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/FilteringFunctions/arm_lms_q31.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="MatrixFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_add_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_add_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_add_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_cmplx_mult_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_cmplx_mult_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_cmplx_mult_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_inverse_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_inverse_f64.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_mult_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_mult_fast_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_mult_fast_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_mult_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_mult_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_scale_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_scale_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_scale_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_sub_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_sub_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_sub_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_trans_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_trans_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/MatrixFunctions/arm_mat_trans_q31.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="StatisticsFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_max_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_max_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_max_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_max_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_mean_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_mean_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_mean_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_mean_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_min_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_min_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_min_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_min_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_power_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_power_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_power_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_power_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_rms_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_rms_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_rms_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_std_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_std_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_std_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_var_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_var_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_var_q31.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="SupportFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_copy_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_copy_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_copy_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_copy_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_fill_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_fill_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_fill_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_fill_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_float_to_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_float_to_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_float_to_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q15_to_float.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q15_to_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q15_to_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q31_to_float.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q31_to_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q31_to_q7.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q7_to_float.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q7_to_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/SupportFunctions/arm_q7_to_q31.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="TransformFunctions">
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_bitreversal.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix2_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix2_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix2_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix2_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix2_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix2_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix4_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix4_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix4_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix4_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix4_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix4_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix8_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_dct4_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_dct4_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_dct4_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_dct4_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_dct4_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_dct4_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_fast_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_fast_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_init_f32.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_init_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_init_q31.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_q15.c"/>
+            <File Name="../../../../Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_q31.c"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+        <VirtualDirectory Name="Examples">
+          <VirtualDirectory Name="arm_variance_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/arm_variance_example_f32.c"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_sin_cos_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/arm_sin_cos_example_f32.c"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_signal_converge_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/arm_signal_converge_data.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/arm_signal_converge_example_f32.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/math_helper.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/math_helper.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_matrix_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/arm_matrix_example_f32.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/math_helper.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/math_helper.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_linear_interp_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/arm_linear_interp_data.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/arm_linear_interp_example_f32.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/math_helper.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/math_helper.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_graphic_equalizer_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/arm_graphic_equalizer_data.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/arm_graphic_equalizer_example_q31.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/math_helper.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/math_helper.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_fir_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/arm_fir_data.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/arm_fir_example_f32.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/math_helper.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/math_helper.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_fft_bin_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/arm_fft_bin_data.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/arm_fft_bin_example_f32.c"/>
+            </VirtualDirectory>
+            <VirtualDirectory Name="GCC">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_fft_bin_example/GCC/arm_fft_bin_data.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_fft_bin_example/GCC/arm_fft_bin_example_f32.c"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_dotproduct_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/arm_dotproduct_example_f32.c"/>
+            </VirtualDirectory>
+            <VirtualDirectory Name="GCC">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_dotproduct_example/GCC/arm_dotproduct_example_f32.c"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_convolution_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/arm_convolution_example_f32.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/math_helper.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/math_helper.h"/>
+            </VirtualDirectory>
+            <VirtualDirectory Name="GCC">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_convolution_example/GCC/arm_convolution_example_f32.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_convolution_example/GCC/math_helper.c"/>
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_convolution_example/GCC/math_helper.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+          <VirtualDirectory Name="arm_class_marks_example">
+            <VirtualDirectory Name="ARM">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/arm_class_marks_example_f32.c"/>
+            </VirtualDirectory>
+            <VirtualDirectory Name="GCC">
+              <File Name="../../../../Drivers/CMSIS/DSP_Lib/Examples/arm_class_marks_example/GCC/arm_class_marks_example_f32.c"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Device">
+        <VirtualDirectory Name="ST">
+          <VirtualDirectory Name="STM32F7xx">
+            <VirtualDirectory Name="Source">
+              <VirtualDirectory Name="Templates">
+                <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c"/>
+              </VirtualDirectory>
+            </VirtualDirectory>
+            <VirtualDirectory Name="Include">
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f745xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f756xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f765xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f769xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f777xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f779xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h"/>
+              <File Name="../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h"/>
+            </VirtualDirectory>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Include">
+        <File Name="../../../../Drivers/CMSIS/Include/arm_common_tables.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/arm_const_structs.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/arm_math.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/cmsis_armcc.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/cmsis_armcc_V6.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/cmsis_gcc.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_cm0.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_cm0plus.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_cm3.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_cm4.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_cm7.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_cmFunc.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_cmInstr.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_cmSimd.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_sc000.h"/>
+        <File Name="../../../../Drivers/CMSIS/Include/core_sc300.h"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="BSP">
+      <VirtualDirectory Name="Components">
+        <VirtualDirectory Name="adv7533">
+          <File Name="../../../../Drivers/BSP/Components/adv7533/adv7533.c"/>
+          <File Name="../../../../Drivers/BSP/Components/adv7533/adv7533.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="ampire480272">
+          <File Name="../../../../Drivers/BSP/Components/ampire480272/ampire480272.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="ampire640480">
+          <File Name="../../../../Drivers/BSP/Components/ampire640480/ampire640480.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="Common">
+          <File Name="../../../../Drivers/BSP/Components/Common/accelero.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/audio.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/camera.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/epd.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/gyro.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/idd.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/io.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/lcd.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/magneto.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/ts.h"/>
+          <File Name="../../../../Drivers/BSP/Components/Common/tsensor.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="exc7200">
+          <File Name="../../../../Drivers/BSP/Components/exc7200/exc7200.c"/>
+          <File Name="../../../../Drivers/BSP/Components/exc7200/exc7200.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="ft5336">
+          <File Name="../../../../Drivers/BSP/Components/ft5336/ft5336.c"/>
+          <File Name="../../../../Drivers/BSP/Components/ft5336/ft5336.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="ft6x06">
+          <File Name="../../../../Drivers/BSP/Components/ft6x06/ft6x06.c"/>
+          <File Name="../../../../Drivers/BSP/Components/ft6x06/ft6x06.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="mfxstm32l152">
+          <File Name="../../../../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.c"/>
+          <File Name="../../../../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="mx25l512">
+          <File Name="../../../../Drivers/BSP/Components/mx25l512/mx25l512.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="n25q128a">
+          <File Name="../../../../Drivers/BSP/Components/n25q128a/n25q128a.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="n25q512a">
+          <File Name="../../../../Drivers/BSP/Components/n25q512a/n25q512a.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="otm8009a">
+          <File Name="../../../../Drivers/BSP/Components/otm8009a/otm8009a.c"/>
+          <File Name="../../../../Drivers/BSP/Components/otm8009a/otm8009a.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="ov9655">
+          <File Name="../../../../Drivers/BSP/Components/ov9655/ov9655.c"/>
+          <File Name="../../../../Drivers/BSP/Components/ov9655/ov9655.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="rk043fn48h">
+          <File Name="../../../../Drivers/BSP/Components/rk043fn48h/rk043fn48h.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="s5k5cag">
+          <File Name="../../../../Drivers/BSP/Components/s5k5cag/s5k5cag.c"/>
+          <File Name="../../../../Drivers/BSP/Components/s5k5cag/s5k5cag.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="st7735">
+          <File Name="../../../../Drivers/BSP/Components/st7735/st7735.c"/>
+          <File Name="../../../../Drivers/BSP/Components/st7735/st7735.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="stmpe811">
+          <File Name="../../../../Drivers/BSP/Components/stmpe811/stmpe811.c"/>
+          <File Name="../../../../Drivers/BSP/Components/stmpe811/stmpe811.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="ts3510">
+          <File Name="../../../../Drivers/BSP/Components/ts3510/ts3510.c"/>
+          <File Name="../../../../Drivers/BSP/Components/ts3510/ts3510.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="wm8994">
+          <File Name="../../../../Drivers/BSP/Components/wm8994/wm8994.c"/>
+          <File Name="../../../../Drivers/BSP/Components/wm8994/wm8994.h"/>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="STM32746G-Discovery">
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.h"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_camera.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_camera.h"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.h"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.h"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sd.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sd.h"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.h"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.c"/>
+        <File Name="../../../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.h"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Description/>
+  <Dependencies/>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="Cross GCC ( arm-none-eabi )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="./Debug" Command="$(WorkspacePath)\cmake-build-$(WorkspaceConfiguration)\bin\$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="CMake">-D"CMAKE_MAKE_PROGRAM:PATH=C:\msys64\usr\bin\make.exe"</BuildSystem>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="Cross GCC ( arm-none-eabi )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+        <Preprocessor Value="NDEBUG"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="./Release" Command="$(WorkspacePath)\cmake-build-$(WorkspaceConfiguration)\bin\$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="CMake"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>
