@@ -46,13 +46,14 @@ ENDIF()
 
 # FIND ARM-NONE_EABI Toolchain
 IF(NOT TOOLCHAIN_PREFIX)
-  IF(WIN32)
-    SET(TOOLCHAIN_PREFIX "/cygdrive/c/gcc-arm-none-eabi")
+  IF(EXISTS "/cygdrive/")
+    SET(TOOLCHAIN_PREFIX "/cygdrive/c/arm-toolchain")
   ELSE()
     SET(TOOLCHAIN_PREFIX "/usr/gcc-arm-none-eabi")
   ENDIF()
-     MESSAGE(STATUS "No TOOLCHAIN_PREFIX specified, using default: " ${TOOLCHAIN_PREFIX})
 ENDIF()
+
+MESSAGE(STATUS "Using TOOLCHAIN_PREFIX: " ${TOOLCHAIN_PREFIX})
 
 IF(NOT TARGET_TRIPLET)
     SET(TARGET_TRIPLET "arm-none-eabi")
@@ -145,19 +146,7 @@ FUNCTION(ARM_SET_LDSCRIPT TARGET)
 ENDFUNCTION()
 
 FUNCTION(ARM_SET_TARGET_PROPERTIES TARGET)
-    IF(NOT CHIP_DEFINES)
-        IF(NOT CHIP)
-            MESSAGE(WARNING "Neither CHIP_DEFINES nor CHIP selected, ARM_SET_CHIP_DEFINITIONS directly")
-        ELSE()
-            ARM_GENERATE_CHIP_DEFINES(${CHIP} CHIP_DEFINES)
-        ENDIF()
-    ENDIF()
-    
-    IF(NOT CHIP_DEFINES)
-      MESSAGE(WARNING "Cannot generate chip defines for: ${CHIP}")
-    ENDIF()
-    
-    ARM_SET_CHIP_DEFINES(${TARGET} ${CHIP_DEFINES})
+	
     ARM_SET_LDSCRIPT(${TARGET})
     
 ENDFUNCTION()
