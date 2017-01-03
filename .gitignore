@@ -6,3 +6,6 @@
 *.map
 *.lst
 *.d
+CMakeCache.txt
+CMakeFiles/*
+cmake_install.cmake

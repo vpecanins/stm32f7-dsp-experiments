@@ -9,6 +9,22 @@
 
 INCLUDE(CMakeForceCompiler)
 
+# is TRUE on all UNIX-like OS's, including Apple OS X and CygWin
+MESSAGE( STATUS "UNIX: " ${UNIX} )
+
+# is TRUE on Windows, including CygWin 
+MESSAGE( STATUS "WIN32: " ${WIN32} )
+
+# is TRUE on Apple OS X
+MESSAGE( STATUS "APPLE: " ${APPLE} )
+
+# is TRUE when using the MinGW compiler in Windows
+MESSAGE( STATUS "MINGW: " ${MINGW} )
+
+# is TRUE on Windows when using the CygWin version of cmake
+MESSAGE( STATUS "CYGWIN: " ${CYGWIN} )
+
+
 SET(SUPPORTED_PLATFORMS STM32 MK CACHE INTERNAL "Supported ARM Cortex-M chip brands")
 
 SET(SUPPORTED_FAMILIES_STM32 L0 L1 L4 F0 F1 F2 F3 F4 F7 CACHE INTERNAL "Supported Families STM32")
@@ -46,11 +62,13 @@ ENDIF()
 
 # FIND ARM-NONE_EABI Toolchain
 IF(NOT TOOLCHAIN_PREFIX)
-  IF(EXISTS "/cygdrive/")
-    SET(TOOLCHAIN_PREFIX "/cygdrive/c/arm-toolchain")
+  IF(WIN32)
+    SET(TOOLCHAIN_PREFIX_1 "C:/arm-toolchain")
+	SET(CMAKE_EXECUTABLE_SUFFIX ".exe")
   ELSE()
-    SET(TOOLCHAIN_PREFIX "/usr/gcc-arm-none-eabi")
+    SET(TOOLCHAIN_PREFIX_1 "/usr/gcc-arm-none-eabi")
   ENDIF()
+  FILE(TO_CMAKE_PATH ${TOOLCHAIN_PREFIX_1} TOOLCHAIN_PREFIX)
 ENDIF()
 
 MESSAGE(STATUS "Using TOOLCHAIN_PREFIX: " ${TOOLCHAIN_PREFIX})
@@ -128,7 +146,7 @@ FUNCTION(ARM_SET_LDSCRIPT TARGET)
       IF(NOT LINKER_SCRIPT)
         MESSAGE(FATAL-ERROR "No suitable LINKER_SCRIPT found.")
       ELSE()
-        MESSAGE(STATUS "No linker script specified, using found: ${LINKER_SCRIPT}.")
+        MESSAGE(STATUS "Found linker script: ${LINKER_SCRIPT}.")
       ENDIF()
     ENDIF()
     
