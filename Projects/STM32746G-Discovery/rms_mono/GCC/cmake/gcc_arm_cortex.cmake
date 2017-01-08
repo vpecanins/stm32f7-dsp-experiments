@@ -1,4 +1,18 @@
-# Toolchain-related configurations:
+# CMake script for building projects on STM32 / Cortex-M Microcontrollers
+# Copyright 2017 Victor Pecanins
+#
+# In Windows:
+# - Use GIT Bash MSYS console
+# - Use cmake for windows version (add it to the GIT Bash $PATH)
+# - Install msys-make in the GIT Bash with mingw-get
+# - gcc-arm-none-eabi for windows
+# - Generate Makefiles calling: cmake . -G"MSYS Makefiles"
+#
+# In Linux:
+# <Not yet tested>
+#
+#
+# This file: Toolchain-related configurations:
 # - Decode CHIP_PLATFORM and CHIP_FAMILY from CHIP
 # - Include appropriate cmake file depending on CHIP_PLATFORM and CHIP_FAMILY
 # - Find arm-none-eabi-gcc
@@ -28,10 +42,10 @@ MESSAGE( STATUS "CYGWIN: " ${CYGWIN} )
 SET(SUPPORTED_PLATFORMS STM32 MK CACHE INTERNAL "Supported ARM Cortex-M chip brands")
 
 SET(SUPPORTED_FAMILIES_STM32 L0 L1 L4 F0 F1 F2 F3 F4 F7 CACHE INTERNAL "Supported Families STM32")
-SET(SUPPORTED_FAMILIES_MK 80 W40 W41 CACHE INTERNAL "Supported Families STM32")
+#SET(SUPPORTED_FAMILIES_MK 80 W40 W41 CACHE INTERNAL "Supported Families Kinetis")
 
 IF(NOT CHIP)
-    MESSAGE(FATAL_ERROR "No CHIP specified, please select part number using -DCHIP=STM32F746N")
+    MESSAGE(FATAL_ERROR "No CHIP specified, please select part number using for example -DCHIP=STM32F746N")
 ENDIF()
 
 STRING(TOUPPER ${CHIP} CHIP)
@@ -75,7 +89,7 @@ MESSAGE(STATUS "Using TOOLCHAIN_PREFIX: " ${TOOLCHAIN_PREFIX})
 
 IF(NOT TARGET_TRIPLET)
     SET(TARGET_TRIPLET "arm-none-eabi")
-    MESSAGE(STATUS "No TARGET_TRIPLET specified, using default: " ${TARGET_TRIPLET})
+    MESSAGE(STATUS "Using default TARGET_TRIPLET: " ${TARGET_TRIPLET})
 ENDIF()
 
 SET(TOOLCHAIN_BIN_DIR ${TOOLCHAIN_PREFIX}/bin)
@@ -146,7 +160,7 @@ FUNCTION(ARM_SET_LDSCRIPT TARGET)
       IF(NOT LINKER_SCRIPT)
         MESSAGE(FATAL-ERROR "No suitable LINKER_SCRIPT found.")
       ELSE()
-        MESSAGE(STATUS "Found linker script: ${LINKER_SCRIPT}.")
+        MESSAGE(STATUS "Found linker script: ${LINKER_SCRIPT}")
       ENDIF()
     ENDIF()
     

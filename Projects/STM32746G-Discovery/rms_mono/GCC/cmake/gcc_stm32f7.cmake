@@ -1,13 +1,15 @@
-SET(CORE_FLAGS "-mthumb -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=softfp -mabi=aapcs")
-SET(OPTIM_FLAGS "-fno-builtin -ffunction-sections -fdata-sections -fomit-frame-pointer -fno-unroll-loops -ffast-math -ftree-vectorize")
+SET(CORE_FLAGS "-mthumb -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=softfp -mabi=aapcs") #
+SET(OPTIM_FLAGS "-fno-builtin -ffunction-sections -fmessage-length=0  -fdata-sections -fomit-frame-pointer -fno-unroll-loops -ffast-math -ftree-vectorize")
+SET(EXTRA_FLAGS "-nostartfiles -specs=nano.specs")
+SET(WARN_FLAGS "-Wall -Werror-implicit-function-declaration")
 
-SET(CMAKE_C_FLAGS "${CORE_FLAGS} ${OPTIM_FLAGS} -Wall -std=gnu99" CACHE INTERNAL "c compiler flags")
-SET(CMAKE_CXX_FLAGS "${CORE_FLAGS} ${OPTIM_FLAGS} -Wall -std=c++11" CACHE INTERNAL "cxx compiler flags")
-SET(CMAKE_ASM_FLAGS "${CORE_FLAGS} -x assembler-with-cpp" CACHE INTERNAL "asm compiler flags")
+SET(CMAKE_C_FLAGS "${CORE_FLAGS} ${OPTIM_FLAGS} ${WARN_FLAGS} -std=gnu99" CACHE INTERNAL "c compiler flags")
+SET(CMAKE_CXX_FLAGS "${CORE_FLAGS} ${OPTIM_FLAGS} ${EXTRA_FLAGS} ${WARN_FLAGS} -std=c++11" CACHE INTERNAL "cxx compiler flags")
+SET(CMAKE_ASM_FLAGS "${CORE_FLAGS} ${EXTRA_FLAGS} ${WARN_FLAGS} -x assembler-with-cpp" CACHE INTERNAL "asm compiler flags")
 
-SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--gc-sections ${CORE_FLAGS}" CACHE INTERNAL "executable linker flags")
-SET(CMAKE_MODULE_LINKER_FLAGS "${CORE_FLAGS}" CACHE INTERNAL "module linker flags")
-SET(CMAKE_SHARED_LINKER_FLAGS "${CORE_FLAGS}" CACHE INTERNAL "shared linker flags")
+SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--gc-sections ${CORE_FLAGS} ${OPTIM_FLAGS} ${EXTRA_FLAGS} ${WARN_FLAGS} " CACHE INTERNAL "executable linker flags")
+SET(CMAKE_MODULE_LINKER_FLAGS "${CORE_FLAGS} ${OPTIM_FLAGS} ${WARN_FLAGS} " CACHE INTERNAL "module linker flags")
+SET(CMAKE_SHARED_LINKER_FLAGS "${CORE_FLAGS} ${OPTIM_FLAGS} ${WARN_FLAGS} " CACHE INTERNAL "shared linker flags")
 
 # Preprocessor defines specific for stm32 device 
 # The accepted values are copied from file CMSIS/Device/ST/STM32F7xx/stm32f7xx.h
@@ -33,4 +35,4 @@ ELSE()
 	MESSAGE(WARNING "Cannot find any matching CHIP_DEFINE (Needed for STM32 HAL libraries)")
 ENDIF()
 
-ADD_DEFINITIONS("-D${STM32_CHIP_DEFINE} -DARM_MATH_CM7")
+ADD_DEFINITIONS("-DSTM32F7 -D${STM32_CHIP_DEFINE} -DARM_MATH_CM7 -D__FPU_PRESENT")
