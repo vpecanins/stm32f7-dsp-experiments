@@ -78,6 +78,50 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/C/CMake/bin/cmake.exe -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/C/CMake/bin/cmake.exe -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/C/CMake/bin/cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/C/CMake/bin/cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /C/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/GCC/CMakeFiles /C/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/GCC/CMakeFiles/progress.marks
@@ -122,19 +166,6 @@ stm32cube_p0: cmake_check_build_system
 stm32cube_p0/fast:
 	$(MAKE) -f CMakeFiles/stm32cube_p0.dir/build.make CMakeFiles/stm32cube_p0.dir/build
 .PHONY : stm32cube_p0/fast
-
-#=============================================================================
-# Target rules for targets named rms-mono.elf
-
-# Build rule for target.
-rms-mono.elf: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rms-mono.elf
-.PHONY : rms-mono.elf
-
-# fast build rule for target.
-rms-mono.elf/fast:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/build
-.PHONY : rms-mono.elf/fast
 
 #=============================================================================
 # Target rules for targets named stm32cube_p1
@@ -202,6 +233,19 @@ stm32cube_p5/fast:
 .PHONY : stm32cube_p5/fast
 
 #=============================================================================
+# Target rules for targets named rms_mono.elf
+
+# Build rule for target.
+rms_mono.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rms_mono.elf
+.PHONY : rms_mono.elf
+
+# fast build rule for target.
+rms_mono.elf/fast:
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/build
+.PHONY : rms_mono.elf/fast
+
+#=============================================================================
 # Target rules for targets named stm32cube_p6
 
 # Build rule for target.
@@ -226,32 +270,6 @@ stm32cube_p7: cmake_check_build_system
 stm32cube_p7/fast:
 	$(MAKE) -f CMakeFiles/stm32cube_p7.dir/build.make CMakeFiles/stm32cube_p7.dir/build
 .PHONY : stm32cube_p7/fast
-
-#=============================================================================
-# Target rules for targets named rms-mono.hex
-
-# Build rule for target.
-rms-mono.hex: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rms-mono.hex
-.PHONY : rms-mono.hex
-
-# fast build rule for target.
-rms-mono.hex/fast:
-	$(MAKE) -f CMakeFiles/rms-mono.hex.dir/build.make CMakeFiles/rms-mono.hex.dir/build
-.PHONY : rms-mono.hex/fast
-
-#=============================================================================
-# Target rules for targets named rms-mono.bin
-
-# Build rule for target.
-rms-mono.bin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rms-mono.bin
-.PHONY : rms-mono.bin
-
-# fast build rule for target.
-rms-mono.bin/fast:
-	$(MAKE) -f CMakeFiles/rms-mono.bin.dir/build.make CMakeFiles/rms-mono.bin.dir/build
-.PHONY : rms-mono.bin/fast
 
 C_/stm32f7-dsp-experiments/Drivers/BSP/Components/adv7533/adv7533.obj: C_/stm32f7-dsp-experiments/Drivers/BSP/Components/adv7533/adv7533.c.obj
 
@@ -664,7 +682,7 @@ C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_e
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.obj:
-	$(MAKE) -f CMakeFiles/stm32cube_p6.dir/build.make CMakeFiles/stm32cube_p6.dir/C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.obj
+	$(MAKE) -f CMakeFiles/stm32cube_p7.dir/build.make CMakeFiles/stm32cube_p7.dir/C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.obj
 .PHONY : C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.obj
 
 C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.i: C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.i
@@ -673,7 +691,7 @@ C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_e
 
 # target to preprocess a source file
 C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.i:
-	$(MAKE) -f CMakeFiles/stm32cube_p6.dir/build.make CMakeFiles/stm32cube_p6.dir/C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.i
+	$(MAKE) -f CMakeFiles/stm32cube_p7.dir/build.make CMakeFiles/stm32cube_p7.dir/C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.i
 .PHONY : C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.i
 
 C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.s: C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.s
@@ -682,7 +700,7 @@ C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_e
 
 # target to generate assembly for a file
 C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.s:
-	$(MAKE) -f CMakeFiles/stm32cube_p6.dir/build.make CMakeFiles/stm32cube_p6.dir/C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.s
+	$(MAKE) -f CMakeFiles/stm32cube_p7.dir/build.make CMakeFiles/stm32cube_p7.dir/C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.s
 .PHONY : C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_eeprom.c.s
 
 C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.obj: C_/stm32f7-dsp-experiments/Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.c.obj
@@ -8143,7 +8161,7 @@ C_/stm32f7-dsp-experiments/Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/gc
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/gcc/startup_stm32f746xx.s.obj:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/gcc/startup_stm32f746xx.s.obj
+	$(MAKE) -f CMakeFiles/stm32cube_p5.dir/build.make CMakeFiles/stm32cube_p5.dir/C_/stm32f7-dsp-experiments/Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/gcc/startup_stm32f746xx.s.obj
 .PHONY : C_/stm32f7-dsp-experiments/Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/gcc/startup_stm32f746xx.s.obj
 
 C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.obj: C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj
@@ -8584,7 +8602,7 @@ C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.obj:
-	$(MAKE) -f CMakeFiles/stm32cube_p5.dir/build.make CMakeFiles/stm32cube_p5.dir/C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.obj
+	$(MAKE) -f CMakeFiles/stm32cube_p6.dir/build.make CMakeFiles/stm32cube_p6.dir/C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.obj
 .PHONY : C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.obj
 
 C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.i: C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.i
@@ -8593,7 +8611,7 @@ C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.
 
 # target to preprocess a source file
 C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.i:
-	$(MAKE) -f CMakeFiles/stm32cube_p5.dir/build.make CMakeFiles/stm32cube_p5.dir/C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.i
+	$(MAKE) -f CMakeFiles/stm32cube_p6.dir/build.make CMakeFiles/stm32cube_p6.dir/C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.i
 .PHONY : C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.i
 
 C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.s: C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.s
@@ -8602,7 +8620,7 @@ C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.
 
 # target to generate assembly for a file
 C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.s:
-	$(MAKE) -f CMakeFiles/stm32cube_p5.dir/build.make CMakeFiles/stm32cube_p5.dir/C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.s
+	$(MAKE) -f CMakeFiles/stm32cube_p6.dir/build.make CMakeFiles/stm32cube_p6.dir/C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.s
 .PHONY : C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c.s
 
 C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.obj: C_/stm32f7-dsp-experiments/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c.obj
@@ -9907,7 +9925,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.obj: C_
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.obj:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.obj
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.obj
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.obj
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.i: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.i
@@ -9916,7 +9934,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.i: C_/s
 
 # target to preprocess a source file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.i:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.i
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.i
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.i
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.s: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.s
@@ -9925,7 +9943,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.s: C_/s
 
 # target to generate assembly for a file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.s:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.s
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.s
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd.c.s
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.obj: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.obj
@@ -9934,7 +9952,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.obj
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.obj:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.obj
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.obj
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.obj
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.i: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.i
@@ -9943,7 +9961,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.i: 
 
 # target to preprocess a source file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.i:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.i
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.i
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.i
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.s: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.s
@@ -9952,7 +9970,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.s: 
 
 # target to generate assembly for a file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.s:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.s
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.s
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/lcd_log.c.s
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.obj: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.obj
@@ -9961,7 +9979,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.obj: C
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.obj:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.obj
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.obj
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.obj
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.i: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.i
@@ -9970,7 +9988,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.i: C_/
 
 # target to preprocess a source file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.i:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.i
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.i
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.i
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.s: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.s
@@ -9979,7 +9997,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.s: C_/
 
 # target to generate assembly for a file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.s:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.s
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.s
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/main.c.s
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.obj: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.obj
@@ -9988,7 +10006,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_i
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.obj:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.obj
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.obj
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.obj
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.i: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.i
@@ -9997,7 +10015,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_i
 
 # target to preprocess a source file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.i:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.i
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.i
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.i
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.s: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.s
@@ -10006,7 +10024,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_i
 
 # target to generate assembly for a file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.s:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.s
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.s
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/stm32f7xx_it.c.s
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.obj: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.obj
@@ -10015,7 +10033,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.ob
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.obj:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.obj
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.obj
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.obj
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.i: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.i
@@ -10024,7 +10042,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.i:
 
 # target to preprocess a source file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.i:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.i
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.i
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.i
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.s: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.s
@@ -10033,7 +10051,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.s:
 
 # target to generate assembly for a file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.s:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.s
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.s
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/syscalls.c.s
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.obj: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.obj
@@ -10042,7 +10060,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm3
 
 # target to build an object file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.obj:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.obj
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.obj
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.obj
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.i: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.i
@@ -10051,7 +10069,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm3
 
 # target to preprocess a source file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.i:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.i
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.i
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.i
 
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.s: C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.s
@@ -10060,7 +10078,7 @@ C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm3
 
 # target to generate assembly for a file
 C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.s:
-	$(MAKE) -f CMakeFiles/rms-mono.elf.dir/build.make CMakeFiles/rms-mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.s
+	$(MAKE) -f CMakeFiles/rms_mono.elf.dir/build.make CMakeFiles/rms_mono.elf.dir/C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.s
 .PHONY : C_/stm32f7-dsp-experiments/Projects/STM32746G-Discovery/rms_mono/Src/system_stm32f7xx.c.s
 
 # Help Target
@@ -10070,18 +10088,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... stm32cube_p0"
-	@echo "... rms-mono.elf"
 	@echo "... stm32cube_p1"
 	@echo "... stm32cube_p2"
 	@echo "... stm32cube_p3"
 	@echo "... stm32cube_p4"
 	@echo "... rebuild_cache"
 	@echo "... stm32cube_p5"
+	@echo "... rms_mono.elf"
 	@echo "... stm32cube_p6"
 	@echo "... stm32cube_p7"
-	@echo "... rms-mono.hex"
-	@echo "... rms-mono.bin"
 	@echo "... edit_cache"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... C_/stm32f7-dsp-experiments/Drivers/BSP/Components/adv7533/adv7533.obj"
 	@echo "... C_/stm32f7-dsp-experiments/Drivers/BSP/Components/adv7533/adv7533.i"
 	@echo "... C_/stm32f7-dsp-experiments/Drivers/BSP/Components/adv7533/adv7533.s"

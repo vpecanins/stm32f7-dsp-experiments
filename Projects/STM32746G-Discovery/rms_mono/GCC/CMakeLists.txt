@@ -3,7 +3,7 @@
 #
 # In Windows:
 # - Use GIT Bash MSYS console
-# - Use cmake for windows version (add it to the GIT Bash $PATH)
+# - Use cmake for windows version (add it to the GIT Bash $PATH, in ~/.bashrc)
 # - Install msys-make in the GIT Bash with mingw-get
 # - gcc-arm-none-eabi for windows
 # - Generate Makefiles calling: cmake . -G"MSYS Makefiles"
@@ -24,10 +24,11 @@ INCLUDE(gcc_arm_cortex)
 
 FIND_PACKAGE(STM32CUBE)
 
-PROJECT(rms-mono)
-ENABLE_LANGUAGE(ASM)
-
 GET_FILENAME_COMPONENT(PROJECT_ROOT "../" ABSOLUTE)
+GET_FILENAME_COMPONENT(PROJ_NAME ${PROJECT_ROOT} NAME)
+
+PROJECT(${PROJ_NAME})
+ENABLE_LANGUAGE(ASM)
 
 INCLUDE_DIRECTORIES(
 	${PROJECT_ROOT}/Inc
@@ -35,9 +36,7 @@ INCLUDE_DIRECTORIES(
 )
 
 FILE(GLOB C_SOURCE_FILES "${PROJECT_ROOT}/Src/*.c")
-
 SET(PROJECT_SOURCES
-	${STM32CUBE_ROOT}/Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/gcc/startup_stm32f746xx.s
     ${C_SOURCE_FILES}
 )
 
@@ -46,5 +45,5 @@ ADD_EXECUTABLE(${CMAKE_PROJECT_NAME}.elf ${PROJECT_SOURCES})
 TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME}.elf -Wl,--start-group ${STM32CUBE_LIBS} -Wl,--end-group)
 
 ARM_SET_TARGET_PROPERTIES(${CMAKE_PROJECT_NAME}.elf)
-ARM_ADD_HEX_BIN_TARGETS(${CMAKE_PROJECT_NAME}.elf)
 
+install(CODE "MESSAGE(\"Sample install message.\")")
